@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+
+    <style type="text/css">
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .logo {
+            width: 15%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .logo img {
+            width: 33%;
+            border: 3px solid lightgray;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            display: flex;
+            position: sticky;
+            top: 0px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            left: 0px;
+            width: 100%;
+            height: 72px;
+        }
+
+        .navList {
+            align-items: center;
+            width: 70%;
+            display: flex;
+        }
+
+        .navList li {
+            list-style: none;
+            padding: 15px 15px;
+            font-size: 21px;
+        }
+
+        .navList li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .navList li a:hover {
+            color: rgba(202, 63, 8, 0.877);
+        }
+
+        .rightNav {
+            width: 30%;
+            text-align: right;
+            padding: 0px 30px;
+        }
+
+        #search {
+            padding: 5 px;
+            font-size: 16px;
+            border-radius: 10 px;
+            border: 2 px solid grey;
+        }
+
+        .background {
+            background: rgba(0, 0, 0, 0.7) url(../image/Koala.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .box-main {
+            display: flex;
+            color: white;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin: auto;
+            max-width: 65%;
+        }
+
+
+        .firstSection {
+            align-items: center;
+            height: 50vh;
+            padding: 60px 0px;
+        }
+
+        .firstHalf {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+        .secondHalf {
+
+            width: 45%;
+        }
+
+        .secondHalf img {
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            margin: auto;
+            display: block;
+            width: 70%;
+            padding: 29 px 5 px;
+        }
+
+        .text-Big {
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .text-Small {
+            justify-content: center;
+            font-size: 20px;
+            font-stretch: expanded;
+            font-family: fangsong;
+            padding: 10px 0px;
+        }
+
+        .btn {
+            font-family: fangsong;
+            width: 40%;
+            margin: 10 px 0 px;
+            font-size: 20px;
+            background: none;
+            color: white;
+            border-color: blanchedalmond;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .btn-sm {
+            padding: 1 px 12 px;
+            border: 3 px solid grey;
+            border-radius: 8 px;
+            font-size: 15px;
+        }
+
+        .Youtube {
+            height: 580px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            max-width: 80%;
+        }
+
+        .Youtube-centre {
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            max-width: 80%;
+        }
+
+        .Youtube-Left {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            max-width: 80%;
+            flex-direction: row-reverse;
+        }
+
+        .Thumbnail img {
+
+            border-radius: 5%;
+            border: 3 px solid rgb(5, 5, 5);
+            width: 236 px;
+
+        }
+
+        .Thumbnail {
+            margin: 0 15px;
+        }
+
+        .paras {
+            font-family: cursive;
+        }
+
+        .scl-ftr {
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .fa {
+            padding: 5px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 8px;
+            border-radius: 50%;
+        }
+
+        .scl-ftr-lft img {
+            width: 7%;
+        }
+
+        .scl-ftr-lft {
+
+            display: flex;
+            margin: 5px -205px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest-p {
+            background: #cb2027;
+            color: white;
+        }
+
+        .contact {
+            background-color: rgb(202, 194, 193);
+            height: 80vh;
+        }
+
+        .text-center {
+            text-align: center;
+            padding: 20px 0px 0px;
+            font-size: 40px;
+            font-family: cursive;
+        }
+
+        .form {
+            max-width: 62%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .form-input {
+            width: 100%;
+            border: 3px solid grey;
+            border-radius: 7px;
+            font-size: 18px;
+            text-indent: 10px;
+            margin-top: 30px;
+            padding: 5px;
+        }
+
+        .form-btn {
+            border-radius: 25px;
+            border: 2px solid grey;
+            padding: 4px 50px;
+            margin: 20px 0px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: cursive;
+            background: lightgreen;
+            cursor: pointer;
+        }
+
+        .text-ftr {
+            font-size: 20px;
+            font-family: cursive;
+            color: azure;
+            text-align: center;
+        }
+
+        .burger {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            right: 1%;
+            top: 10px;
+        }
+
+        .line {
+            width: 45px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+
+        @media only screen and (max-width:1140px) {
+            .navList {
+                flex-direction: column;
+            }
+
+            .navbar {
+                flex-direction: column;
+                transition: all 1.5s ease;
+                height: 350px;
+            }
+
+            .background {
+                background: rgba(0, 0, 0, 0.7) url(../image/Koala.jpg);
+                background-size: cover;
+                background-blend-mode: darken;
+                background-position: center;
+            }
+
+            .box-main {
+                flex-direction: column-reverse;
+                max-width: 100%;
+            }
+
+            .Youtube {
+                flex-direction: column-reverse;
+                margin-top: 360px;
+            }
+
+            .Youtube-Left {
+                margin-top: 145%;
+            }
+
+            .Youtube-centre {
+                margin-top: 150%;
+            }
+
+            .contact {
+                margin-top: 85%;
+                height: 70%;
+            }
+
+            .rightNav {
+                text-align: center;
+                width: 50%;
+            }
+
+            .logo {
+                width: 55%;
+            }
+
+            .firstSection {
+                height: 70vh;
+            }
+
+            #search {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .firstHalf {
+                width: 90%;
+                text-align: center;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .h-nav-resp {
+                height: 46px;
+            }
+
+            .v-class-resp {
+                opacity: 0;
+            }
+
+            .scl-ftr-lft {
+                margin: 0px 18px;
+                justify-content: center;
+            }
+
+            .scl-ftr {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-ftr {
+                width: 12%;
+                position: absolute;
+                left: 2px;
+                padding: 27px 6px;
+            }
+
+            .text-ftr {
+                font-size: 18px;
+                font-family: cursive;
+                color: azure;
+            }
+
+            .btn {
+                font-size: 25px;
+                flex-direction: column;
+                margin-bottom: 10px;
+                align-items: center;
+                width: 60%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="navList v-class-resp">
+            <div class="logo"><img src="https://source.unsplash.com/python-logo/300x200" alt="logo"></div>
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#ABOUT">ABOUT</a></li>
+            <li><a href="#SERVICES">SERVICES</a></li>
+            <li><a href="#CONTACT US">CONTACT US</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <section class="background firstSection" id="HOME">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-Big" style="text-align: center; font-weight: bold; font-style: italic;">PYTHON TUTORIAL
+                </p>
+                <p class="text-Small">Python is a general-purpose interpreted, interactive, object-oriented, and
+                    high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl,
+                    Python source code is also available under the GNU General Public License (GPL). This tutorial gives
+                    enough understanding on Python programming language</p>
+                <div class="buttons">
+                    <button class="btn">Subscribe Now</button>
+                    <button class="btn">Watch Video</button>
+                </div>
+            </div>
+            <div class="secondHalf">
+                <img src="https://source.unsplash.com/300x200/?pythonlogo, coding" alt="bharat Image">
+            </div>
+        </div>
+    </section>
+    <section class="Youtube" id="ABOUT">
+        <div class="paras">
+            <p class="sectionTag text-Big">WHY T LEARN PYTHON TUTORIAL ?</p>
+            <p class="sectionSubTag text-Small ">Python is a high-level, interpreted, interactive and object-oriented
+                scripting language. Python is designed to be highly readable. It uses English keywords frequently where
+                as other languages use punctuation, and it has fewer syntactical constructions than other languages.
+            </p><br />
+            <p>Python is a MUST for students and working professionals to become a great Software Engineer specially
+                when they are working in Web Development Domain. I will list down some of the key advantages of learning
+                Python:</p><br />
+            <p><b>Python is Interpreted </b> − Python is processed at runtime by the interpreter. You do not need to
+                compile your program before executing it. This is similar to PERL and PHP.</p><br />
+            <p><b>Python is Interactive −</b>You can actually sit at a Python prompt and interact with the interpreter
+                directly to write your programs.</p><br />
+            <p><b>Python is Object-Oriented -</b>Python supports Object-Oriented style or technique of programming that
+                encapsulates code within objects.</p><br />
+            <p><b>Python is a Beginner's Language −</b>Python is a great language for the beginner-level programmers and
+                supports the development of a wide range of applications from simple text processing to WWW browsers to
+                games.</p><br />
+        </div>
+        <div class="Thumbnail">
+            <img src="https://source.unsplash.com/300x200/?programming, coding" alt="bharatImg">
+        </div>
+
+    </section>
+    <section class="Youtube Youtube-Left">
+        <div class="paras">
+            <p class="sectionTag text-Big">Characteristics of Python</p><br />
+            <p class="sectionSubTag text-Small ">Following are important characteristics of Python Programming − </p>
+            <br />
+            <p>* It supports functional and structured programming methods as well as OOP.</p>
+            <p>* It can be used as a scripting language or can be compiled to byte-code for building large applications.
+            </p>
+            <p>* It provides very high-level dynamic data types and supports dynamic type checking.</p>
+            <p>* It supports automatic garbage collection.</p>
+            <p>* It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.</p>
+        </div>
+        <div class="Thumbnail">
+            <img src="https://source.unsplash.com/300x200/?Java language logo" alt="bharatImg">
+        </div>
+    </section>
+    <section class="Youtube Youtube-centre" id="SERVICES">
+        <div class="paras">
+            <p class="sectionTag text-Big">Applications of Python</p>
+            <p class="sectionSubTag text-Small ">As mentioned before, Python is one of the most widely used language
+                over the web. I'm going to list few of them here: </p><br />
+            <p><b>Easy-to-learn − </b>Python has few keywords, simple structure, and a clearly defined syntax. This
+                allows the student to pick up the language quickly.</p><br />
+            <p><b>Easy-to-read − </b>Python code is more clearly defined and visible to the eyes.</p><br />
+            <p><b>Easy-to-maintain −</b>Python's source code is fairly easy-to-maintain.</p><br />
+            <p><b>A broad standard library −</b>Python's bulk of the library is very portable and cross-platform
+                compatible on UNIX, Windows, and Macintosh.</p><br />
+            <p><b>Interactive Mode − </b>Python has support for an interactive mode which allows interactive testing and
+                debugging of snippets of code.</p><br />
+            <p><b>Portable −</b>Python can run on a wide variety of hardware platforms and has the same interface on all
+                platforms.</p><br />
+            <p><b>Extendable − </b>You can add low-level modules to the Python interpreter. These modules enable
+                programmers to add to or customize their tools to be more efficient.</p><br />
+            <p><b>Databases −</b>Python provides interfaces to all major commercial databases.</p><br />
+            <p><b>GUI Programming −</b>Python supports GUI applications that can be created and ported to many system
+                calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.
+            </p><br />
+            <p><b>Scalable −</b>Python provides a better structure and support for large programs than shell scripting.
+            </p><br />
+        </div>
+        <div class="Thumbnail">
+            <img src="https://source.unsplash.com/300x200/?c++ language logo" alt="bharatImg">
+        </div>
+    </section>
+    <section class="contact" id="CONTACT US">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="form" style="color: grey;">
+            <input class="form-input" type="text" name="name" id="name" placeholder="Enter your Name">
+            <input class="form-input" type="text" name="Phone" id="Phone" placeholder="Enter your Phone">
+            <input class="form-input" type="email" name="Email" id="Email" placeholder="Enter your Email">
+            <textarea name="text" id="text" cols="15" rows="5" class="form-input"
+                placeholder="Elaborate your concern"></textarea>
+            <button class="form-btn">Submit</button>
+        </div>
+    </section>
+    <footer class="scl-ftr background">
+
+        <div class="scl-ftr-lft">
+            <a href="#"><img class="logo-ftr" src="C:\Users\pc\Downloads\logo.png" alt="logo"></a>
+            <p class="text-ftr">Copyright &copy; 2021 www.iDemo.com - All Rights Reserved </p>
+        </div>
+
+        <div class="scl-ftr-icns">
+            <ul class="scl-media-icns" style="display: flex;">
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+                <a href="https://www.pinterest.com/" class="fa fa-pinterest-p"></a>
+                <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        burger = document.querySelector('.burger')
+        navbar = document.querySelector('.navbar')
+        navList = document.querySelector('.navList')
+        rightNav = document.querySelector('.rightNav')
+
+        burger.addEventListener('click', () => {
+            rightNav.classList.toggle('v-class-resp');
+            navList.classList.toggle('v-class-resp');
+            navbar.classList.toggle('h-nav-resp');
+        })
+    </script>
+
+</body>
+
+</html>
